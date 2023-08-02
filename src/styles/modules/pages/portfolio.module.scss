@@ -1,0 +1,22 @@
+@use '../../utils' as u;
+.portfolio {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem 0;
+
+  @include u.min-breakpint(md) {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 0 2rem;
+  }
+
+  &__user {
+    text-align: center;
+    &__icon {
+      height: 6.25rem;
+      width: 6.25rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

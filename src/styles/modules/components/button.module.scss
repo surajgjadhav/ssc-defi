@@ -1,14 +1,14 @@
 .btn {
-  background-color: var(--component-background);
-  color: var(--component-foreground);
-  border: 0.125rem solid var(--component-background);
+  background-color: var(--btn-background-rgb);
+  color: var(--btn-foreground-rgb);
+  border: 0.125rem solid var(--btn-background-rgb);
   padding: 1rem 2rem;
   border-radius: 2rem;
   font-size: 1rem;
   cursor: pointer;
 
-  &:hover {
-    background-color: var(--component-foreground);
-    color: var(--component-background);
-  }
+  // &:hover {
+  //   background-color: transparent;
+  //   color: var(--btn-background-rgb);
+  // }
 }

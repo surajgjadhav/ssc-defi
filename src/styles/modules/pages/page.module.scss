@@ -1,4 +1,4 @@
-@use '../../utils' as u;
+@use "../../utils" as u;
 
 .description {
   display: inherit;
@@ -90,7 +90,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -221,17 +221,21 @@
   }
 }
 
-@include u.min-breakpint(lg) {
-}
-
 .banner {
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
+  gap: 2rem;
 
   @include u.min-breakpint(md) {
     flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  @include u.min-breakpint(lg) {
+    gap: 10rem;
   }
 
   &__rev {
@@ -249,6 +253,12 @@
       height: 31.25rem;
       width: 31.25rem;
     }
+    background: linear-gradient(
+      to bottom,
+      var(--background-start-rgb),
+      var(--background-end-rgb)
+    );
+    border-radius: 1rem;
   }
 
   &__info {
@@ -259,11 +269,77 @@
   }
 
   &__title {
-    font-size: 2rem;
+    font-size: 1.375rem;
     font-weight: bold;
+    @include u.min-breakpint(md) {
+      font-size: 2.5rem;
+    }
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: 0.875rem;
+    @include u.min-breakpint(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+
+  @include u.min-breakpint(md) {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+  }
+
+  @include u.min-breakpint(lg) {
+    margin-inline: 5rem;
+  }
+
+  &__title {
+    font-size: 1.625rem;
+    font-weight: bold;
+    text-align: center;
+    background-image: radial-gradient(
+      circle farthest-corner at 0.2% 0.5%,
+      var(--title-start) 3.7%,
+      var(--title-end) 92.7%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    @include u.min-breakpint(md) {
+      font-size: 3rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 0.625rem;
+    text-align: center;
+    @include u.min-breakpint(md) {
+      font-size: 1rem;
+    }
+  }
+
+  &__description {
+    font-size: 0.875rem;
+    text-align: center;
+    @include u.min-breakpint(md) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.flex__box {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include u.min-breakpint(md) {
+    gap: 4rem;
   }
 }

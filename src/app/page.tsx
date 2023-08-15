@@ -32,7 +32,7 @@ const bannerInfo = [
   },
 ];
 
-export default function Home() {
+const Home = () => {
   return (
     <div>
       <div className={styles.brand}>
@@ -73,4 +73,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

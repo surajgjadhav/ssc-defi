@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "@/styles/modules/components/navbar.module.scss";
 import Button from "../Button";
 import coin from "@/assets/icons/coin.svg";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
             />
             <div>SSC</div>
           </div>
-          <div>Portfolio</div>
+          <Link href="/portfolio">Portfolio</Link>
         </div>
         <Button title="Connect" />
       </div>

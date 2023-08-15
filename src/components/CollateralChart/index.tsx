@@ -1,43 +1,43 @@
 "use client";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip } from "chart.js";
+import { Doughnut, ChartData, TData, TLabel } from "react-chartjs-2";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip);
 
 interface CollateralChartProps {
   EthAmount: number;
   BtcAmount: number;
 }
 
-interface ChartData {
-  labels: string[];
-  datasets: {
-    label: string;
-    data: number[];
-    backgroundColor: string[];
-    borderColor: string[];
-    hoverOffset: number;
-  }[];
-  borderColor: string;
-}
-const data: ChartData = {
+const data: ChartData<"doughnut", TData, TLabel> = {
   labels: ["ETH", "BTC"],
   datasets: [
     {
       label: "Collateral Info",
       data: [],
-      backgroundColor: ["rgb(93, 109, 126 , 0.2)", "rgba(255, 159, 64, 0.2)"],
-      borderColor: ["rgba(93, 109, 126  , 1)", "rgba(255, 159, 64, 1)"],
+      backgroundColor: ["rgb(23, 101, 253)", "rgb(79, 203, 141)"],
+      borderColor: ["rgb(23, 101, 253)", "rgb(79, 203, 141)"],
       hoverOffset: 4,
+      borderWidth: 0.8,
     },
   ],
   borderColor: "#00000",
 };
 
+const options = {
+  plugins: {
+    title: {
+      display: true,
+      text: "Custom Chart Title",
+      color: "rgb(23, 101, 253)",
+    },
+  },
+};
+
 const CollateralChart = ({ EthAmount, BtcAmount }: CollateralChartProps) => {
   data.datasets[0].data.push(EthAmount, BtcAmount);
 
-  return <Doughnut data={data} />;
+  return <Doughnut data={data} options={options} />;
 };
 
 export default CollateralChart;

@@ -1,9 +1,17 @@
 .card {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   padding: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 1.125rem;
   background-color: var(--card-bg);
   color: var(--text-dark);
   border: 0.125rem solid var(--border-dark);
+
+  &-light {
+    background-color: var(--card-bg-lt);
+    color: var(--text-light);
+    border-color: var(--border-light);
+    box-shadow: 0px 2px 15px var(--box-shadow);
+  }
 }

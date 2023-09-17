@@ -1,0 +1,39 @@
+@use "../../utils/" as u;
+
+.inputBox {
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  flex-direction: column;
+
+  &__container {
+    font-size: 1rem;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    border: 0.0625rem solid var(--footer-text);
+    @include u.min-breakpint(md) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: var(--text-light);
+    padding-left: 1rem;
+    @include u.min-breakpint(md) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__warning {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    opacity: 0.9;
+    color: rgb(246, 56, 56);
+    padding-left: 1rem;
+    @include u.min-breakpint(md) {
+      font-size: 1.125rem;
+    }
+  }
+}

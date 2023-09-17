@@ -1,0 +1,12 @@
+$min-breakpoints: (
+  'sm': 40em,
+  'md': 48em,
+  'lg': 64em,
+  'xl': 80em,
+);
+
+@mixin min-breakpint($breakpoint) {
+  @media (min-width: map-get($min-breakpoints, $breakpoint)) {
+    @content;
+  }
+}

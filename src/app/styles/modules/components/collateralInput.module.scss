@@ -1,0 +1,60 @@
+@use "../../utils/" as u;
+
+.collateralInput {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    border: 0.0625rem solid var(--footer-text);
+  }
+
+  &__label {
+    font-size: 1rem;
+    color: var(--text-light);
+    padding-left: 1rem;
+    @include u.min-breakpint(md) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__amount {
+    font-size: 1rem;
+    // padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    @include u.min-breakpint(md) {
+      font-size: 1.25rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance: textfield;
+  }
+
+  &__type {
+    font-size: 0.625rem;
+    padding: 0.25rem;
+    border-radius: 1.5rem;
+    // @include u.min-breakpint(md) {
+    //   font-size: 0.75rem;
+    // }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

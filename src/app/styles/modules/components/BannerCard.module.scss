@@ -1,0 +1,60 @@
+@use "../../utils" as u;
+
+.bannerCard {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0;
+  border-radius: 1.125rem;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
+  border: 0.125rem solid var(--border-dark);
+
+  @include u.min-breakpint(md) {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    border-top-left-radius: 1.125rem;
+    border-top-right-radius: 1.125rem;
+    background-color: #08aeea;
+    background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+    @include u.min-breakpint(md) {
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 1.125rem;
+    }
+  }
+
+  &__img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom-left-radius: 1.125rem;
+    border-bottom-right-radius: 1.125rem;
+    padding: 1rem;
+    @include u.min-breakpint(md) {
+      border-top-right-radius: 1.125rem;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: var(--btn-foreground-rgb);
+  }
+}

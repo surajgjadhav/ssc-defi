@@ -1,0 +1,11 @@
+@use "../../utils" as u;
+
+.calculateHealthFactor {
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

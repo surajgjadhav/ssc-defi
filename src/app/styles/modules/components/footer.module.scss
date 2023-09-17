@@ -1,0 +1,20 @@
+@use "../../utils" as u;
+
+.footer {
+  margin-bottom: 1rem;
+  margin-inline: 0.5rem;
+
+  @include u.min-breakpint(lg) {
+    margin-left: calc(var(--sidebar-width) + 1rem);
+  }
+
+  &__container {
+    background-color: var(--footer-background-rgb);
+    border: 1px solid var(--footer-border-rgb);
+    border-radius: 1.25rem;
+    color: var(--footer-text);
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem;
+  }
+}

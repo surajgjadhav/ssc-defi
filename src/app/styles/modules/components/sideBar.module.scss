@@ -1,0 +1,43 @@
+@use "../../utils" as u;
+
+.sideBar {
+  top: 6.8rem;
+  z-index: 1000;
+  position: fixed;
+  width: var(--sidebar-width);
+  height: 80vh;
+  display: none;
+  background-color: var(--card-bg);
+  box-shadow: 0 0 1.25rem 0.25rem rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  @include u.min-breakpint(md) {
+    height: 83vh;
+  }
+
+  @include u.min-breakpint(lg) {
+    display: block;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.3rem;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 0.5rem;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scroller-bg-color);
+    background-image: var(--scroller-bg-img);
+    border-radius: 0.5rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}

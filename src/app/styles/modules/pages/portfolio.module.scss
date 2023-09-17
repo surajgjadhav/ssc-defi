@@ -31,8 +31,7 @@
 
   &__user {
     &__logo {
-      height: 6.25rem;
-      width: 6.25rem;
+      height: auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -46,8 +45,7 @@
     }
 
     &__icon {
-      height: 3rem;
-      width: 3rem;
+      height: auto;
     }
 
     &__id {
@@ -86,8 +84,7 @@
       }
 
       &-icon {
-        height: 1.5rem;
-        width: 1.5rem;
+        height: auto;
       }
     }
   }
@@ -122,8 +119,7 @@
   }
 
   &__icon {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: auto;
 
     &__bg {
       background: linear-gradient(

@@ -1,12 +1,6 @@
 import styles from "@/app/styles/modules/components/sideBar.module.scss";
 import { forwardRef } from "react";
 import NavLink from "../NavLink";
-import coins from "@/app/assets/icons/coins.svg";
-import piggy_bank from "@/app/assets/icons/piggy-bank.svg";
-import stats_report from "@/app/assets/icons/stats-report.svg";
-import fire_flame from "@/app/assets/icons/fire-flame.svg";
-import coins_swap from "@/app/assets/icons/coins-swap.svg";
-import calculator from "@/app/assets/icons/calculator.svg";
 
 const SideBar = forwardRef(function SideBar(props, ref) {
   const depositeLinks = [
@@ -24,12 +18,28 @@ const SideBar = forwardRef(function SideBar(props, ref) {
   return (
     <aside className={styles.sideBar} ref={ref}>
       <div className={styles.sideBar__container}>
-        <NavLink href="/portfolio" linkName="Portfolio" logo={stats_report} />
-        <NavLink title="Deposite" links={depositeLinks} logo={piggy_bank} />
-        <NavLink title="Redeem" links={redeemLinks} logo={coins_swap} />
-        <NavLink href="/mint" linkName="Mint" logo={coins} />
-        <NavLink href="/burn" linkName="Burn" logo={fire_flame} />
-        <NavLink title="Calculate" links={calculateLinks} logo={calculator} />
+        <NavLink
+          href="/portfolio"
+          linkName="Portfolio"
+          logo="/icons/stats-report.svg"
+        />
+        <NavLink
+          title="Deposite"
+          links={depositeLinks}
+          logo="/icons/piggy-bank.svg"
+        />
+        <NavLink
+          title="Redeem"
+          links={redeemLinks}
+          logo="/icons/coins-swap.svg"
+        />
+        <NavLink href="/mint" linkName="Mint" logo="/icons/coins.svg" />
+        <NavLink href="/burn" linkName="Burn" logo="/icons/fire-flame.svg" />
+        <NavLink
+          title="Calculate"
+          links={calculateLinks}
+          logo="/icons/calculator.svg"
+        />
       </div>
     </aside>
   );

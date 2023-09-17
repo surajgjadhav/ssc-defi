@@ -1,34 +1,30 @@
 import Image from "next/image";
 import styles from "@/app/styles/modules/pages/page.module.scss";
-import coin_banner from "@/app/assets/banners/coin_banner.svg";
-import grow_banner from "@/app/assets/banners/grow_banner.svg";
-import invest_banner from "@/app/assets/banners/invest_banner.svg";
-import liquidate_banner from "@/app/assets/banners/liquidate_banner.svg";
 
 const bannerInfo = [
   {
     title: "Stability and Pegging Mechanism",
     description:
       "In a world where many cryptocurrencies experience wild price swings, SSC stands out as a reliable and stable option. Its pegging mechanism ensures that its value remains steady, making it a practical and user-friendly digital currency for everyday use.",
-    imageSrc: coin_banner,
+    imageSrc: "/banners/coin_banner.svg",
   },
   {
     title: "Liquidity Provision",
     description:
       "Participants can provide liquidity to our DeFi ecosystem and earn rewards for their contributions. Liquidity provision is like having a well-stocked store, where customers can easily buy or sell SSC without causing significant price fluctuations. It ensures that SSC remains a practical and user-friendly option for all its users.",
-    imageSrc: grow_banner,
+    imageSrc: "/banners/grow_banner.svg",
   },
   {
     title: "Seamless Transactions",
     description:
       "SSC empowers users with the ability to conduct seamless transactions, offering a fast, cost-effective, and accessible way to handle financial activities. With its user-friendly features, SSC is becoming an increasingly popular choice for individuals and businesses in the digital economy.",
-    imageSrc: invest_banner,
+    imageSrc: "/banners/invest_banner.svg",
   },
   {
     title: "Send money around the globe quickly",
     description:
       "Sending money around the globe quickly with SSC is a game-changer for international transactions. It offers a seamless and cost-effective way to transfer funds, making it an attractive option for individuals and businesses alike.",
-    imageSrc: liquidate_banner,
+    imageSrc: "/banners/liquidate_banner.svg",
   },
 ];
 
@@ -66,6 +62,8 @@ const Home = () => {
             <Image
               className={styles.banner__img}
               src={banner.imageSrc}
+              width={300}
+              height={300}
               alt="Coin Stack Logo"
             />
           </div>

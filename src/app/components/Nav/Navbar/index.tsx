@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "@/app/styles/modules/components/navbar.module.scss";
-import coin from "@/app/assets/icons/coin.svg";
 import Button from "@/app/components/Button";
 
 type NavBarProps = {
@@ -15,7 +14,9 @@ const Navbar = ({ onBurgerClick }: NavBarProps) => {
           <div className={styles.nav__brand}>
             <Image
               className={styles.nav__logo}
-              src={coin}
+              src="/icons/coin.svg"
+              width={32}
+              height={32}
               alt="SSC DeFi Logo"
             />
             <div>SSC</div>

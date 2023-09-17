@@ -1,6 +1,5 @@
 "use client";
 import styles from "@/app/styles/modules/pages/mint.module.scss";
-import coin from "@/app/assets/icons/coin.svg";
 import MintOrBurnForm, { FormType } from "@/app/components/MintOrBurnForm";
 import { useState } from "react";
 import BannerCard from "@/app/components/BannerCard";
@@ -24,7 +23,7 @@ const Mint = () => {
   };
 
   return (
-    <BannerCard imgSrc={coin} title="Mint SSC">
+    <BannerCard imgSrc="/icons/ATM machine-bro.svg" title="Mint SSC">
       <MintOrBurnForm
         formType={FormType.MINT}
         amount={mintAmount}

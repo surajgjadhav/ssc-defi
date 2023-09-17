@@ -3,7 +3,6 @@ import BannerCard from "@/app/components/BannerCard";
 import Button from "@/app/components/Button";
 import styles from "@/app/styles/modules/pages/calculateHealthFactor.module.scss";
 import React, { useState } from "react";
-import heart from "@/app/assets/icons/heart.svg";
 import InputBox from "@/app/components/InputBox";
 export default function CalculateHealthFactor() {
   const [collateralAmount, setCollateralAmount] = useState<number>(0);
@@ -15,7 +14,10 @@ export default function CalculateHealthFactor() {
     console.log("mintedAmount: ", mintedAmount);
   };
   return (
-    <BannerCard imgSrc={heart} title="Calculate Health Factor">
+    <BannerCard
+      imgSrc="/icons/Temperature Measurement-bro.svg"
+      title="Calculate Health Factor"
+    >
       <form
         action=""
         method="post"

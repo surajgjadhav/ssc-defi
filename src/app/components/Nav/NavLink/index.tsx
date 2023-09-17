@@ -44,6 +44,8 @@ const NavLink = (props: NavLinkProps) => {
                 <Image
                   className={styles.navLink__img}
                   src={props.logo}
+                  width={32}
+                  height={32}
                   alt="navLink"
                 />
               </div>
@@ -75,6 +77,8 @@ const NavLink = (props: NavLinkProps) => {
               <Image
                 className={styles.navLink__img}
                 src={props.logo}
+                width={32}
+                height={32}
                 alt="navLink"
               />
             </div>

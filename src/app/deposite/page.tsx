@@ -6,7 +6,6 @@ import CollateralForm, {
 } from "@/app/components/CollateralForm";
 import React, { useState } from "react";
 import styles from "@/app/styles/modules/pages/deposite.module.scss";
-import piggyBank from "@/app/assets/icons/piggy-bank.svg";
 
 export default function Deposite() {
   const [collateralAmount, setCollateralAmount] = useState<number>(0);
@@ -22,7 +21,7 @@ export default function Deposite() {
   };
 
   return (
-    <BannerCard imgSrc={piggyBank} title="Deposite Collateral">
+    <BannerCard imgSrc="/icons/piggy_svg.svg" title="Deposite Collateral">
       <CollateralForm
         formType={CollateralFormType.DEPOSITE}
         amount={collateralAmount}

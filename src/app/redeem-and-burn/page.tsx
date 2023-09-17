@@ -5,7 +5,6 @@ import CollateralForSscForm, {
 } from "@/app/components/CollateralForSscForm";
 import { CollateralType } from "@/app/components/CollateralForm";
 import styles from "@/app/styles/modules/pages/redeemAndBurn.module.scss";
-import coinSwap from "@/app/assets/icons/coins-swap.svg";
 import React, { useState } from "react";
 
 export default function RedeemAndBurn() {
@@ -20,7 +19,10 @@ export default function RedeemAndBurn() {
   };
 
   return (
-    <BannerCard imgSrc={coinSwap} title="Redeem & Burn Collateral">
+    <BannerCard
+      imgSrc="/icons/Cash Payment-bro.svg"
+      title="Redeem & Burn Collateral"
+    >
       <CollateralForSscForm
         formType={CollateralForSscFormType.REDEEM_AND_BURN}
         collateralAmount={collateralAmount}

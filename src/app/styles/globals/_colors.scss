@@ -65,6 +65,8 @@
     rgb(0, 147, 233) 0%,
     rgb(128, 208, 199) 100%
   );
+  --banner-bg-start: rgb(8, 174, 234);
+  --banner-bg-end: rgb(42, 245, 152);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -124,5 +126,7 @@
       rgb(0, 147, 233) 0%,
       rgb(128, 208, 199) 100%
     );
+    --banner-bg-start: rgb(8, 174, 234);
+    --banner-bg-end: rgb(42, 245, 152);
   }
 }

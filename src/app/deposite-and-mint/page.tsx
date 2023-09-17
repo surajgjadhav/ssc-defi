@@ -5,7 +5,6 @@ import CollateralForSscForm, {
 } from "@/app/components/CollateralForSscForm";
 import { CollateralType } from "@/app/components/CollateralForm";
 import React, { useState } from "react";
-import piggyBank from "@/app/assets/icons/piggy-bank.svg";
 import styles from "@/app/styles/modules/pages/depositeAndMint.module.scss";
 
 export default function DepositeAndMint() {
@@ -20,7 +19,10 @@ export default function DepositeAndMint() {
   };
 
   return (
-    <BannerCard imgSrc={piggyBank} title="Deposite & Mint Collateral">
+    <BannerCard
+      imgSrc="/icons/Piggy bank-bro.svg"
+      title="Deposite & Mint Collateral"
+    >
       <CollateralForSscForm
         formType={CollateralForSscFormType.DEPOSITE_AND_MINT}
         collateralAmount={collateralAmount}

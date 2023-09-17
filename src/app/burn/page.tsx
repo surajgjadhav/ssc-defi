@@ -1,6 +1,5 @@
 "use client";
 import styles from "@/app/styles/modules/pages/burn.module.scss";
-import fireFlames from "@/app/assets/icons/fire-flame.svg";
 import MintOrBurnForm, { FormType } from "@/app/components/MintOrBurnForm";
 import { useState } from "react";
 import BannerCard from "@/app/components/BannerCard";
@@ -14,7 +13,7 @@ const Burn = () => {
   };
 
   return (
-    <BannerCard imgSrc={fireFlames} title="Burn SSC">
+    <BannerCard imgSrc="/icons/Fire ball-bro.svg" title="Burn SSC">
       <MintOrBurnForm
         formType={FormType.BURN}
         amount={burnAmount}

@@ -18,6 +18,8 @@ export default function BannerCard({
         <Image
           className={styles.bannerCard__img}
           src={imgSrc}
+          height={300}
+          width={300}
           alt="Banner Icon"
         />
         <div className={styles.bannerCard__title}>{title}</div>

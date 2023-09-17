@@ -17,4 +17,9 @@
     font-weight: 500;
     padding: 1rem;
   }
+
+  &__link {
+    font-size: 0.75rem;
+    color: var(--banner-bg-start);
+  }
 }

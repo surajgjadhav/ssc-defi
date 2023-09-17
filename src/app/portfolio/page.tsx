@@ -1,12 +1,5 @@
 import Card from "@/app/components/Card";
 import styles from "@/app/styles/modules/pages/portfolio.module.scss";
-import user from "@/app/assets/icons/user.svg";
-import coin from "@/app/assets/icons/coin.svg";
-import piggy_bank from "@/app/assets/icons/piggy-bank.svg";
-import bitcoin_circle from "@/app/assets/icons/bitcoin-circle.svg";
-import ethereum_circle from "@/app/assets/icons/ethereum-circle.svg";
-import percentage_circle from "@/app/assets/icons/percentage-circle.svg";
-import activity from "@/app/assets/icons/activity.svg";
 import Image from "next/image";
 import CollateralChart from "@/app/components/CollateralChart";
 import PriceChart from "@/app/components/PriceChart";
@@ -19,10 +12,19 @@ type Investment = {
 };
 
 const investmentDetails: Investment[] = [
-  { name: "Collateral Amount", icon: piggy_bank, value: 123, currency: "USD" },
-  { name: "SSC Balance", icon: coin, value: 123, currency: "USD" },
-  { name: "Helath Factor", icon: activity, value: 123 },
-  { name: "Liquidation Bonus", icon: percentage_circle, value: "10 %" },
+  {
+    name: "Collateral Amount",
+    icon: "/icons/piggy-bank.svg",
+    value: 123,
+    currency: "USD",
+  },
+  { name: "SSC Balance", icon: "/icons/coin.svg", value: 123, currency: "USD" },
+  { name: "Helath Factor", icon: "/icons/activity.svg", value: 123 },
+  {
+    name: "Liquidation Bonus",
+    icon: "/icons/percentage-circle.svg",
+    value: "10 %",
+  },
 ];
 
 const Portfolio: React.FC = () => {
@@ -34,8 +36,10 @@ const Portfolio: React.FC = () => {
           <div className={styles.portfolio__user__logo}>
             <Image
               className={styles.portfolio__user__icon}
-              src={user}
+              src="/icons/user.svg"
               alt="User Icon"
+              width={100}
+              height={100}
             />
           </div>
           <div className={styles.portfolio__user__id}>0x123....456</div>
@@ -62,6 +66,8 @@ const Portfolio: React.FC = () => {
                     className={styles.portfolio__icon}
                     src={investment.icon}
                     alt="health icon"
+                    height={24}
+                    width={24}
                   />
                 </div>
               </div>
@@ -80,8 +86,10 @@ const Portfolio: React.FC = () => {
             <div className={styles["portfolio__chart__legend-flex"]}>
               <Image
                 className={styles["portfolio__chart__legend-icon"]}
-                src={ethereum_circle}
+                src="/icons/ethereum-circle.svg"
                 alt="User Icon"
+                width={24}
+                height={24}
               />
               <div>ETH</div>
             </div>
@@ -89,8 +97,10 @@ const Portfolio: React.FC = () => {
             <div className={styles["portfolio__chart__legend-flex"]}>
               <Image
                 className={styles["portfolio__chart__legend-icon"]}
-                src={bitcoin_circle}
+                src="/icons/bitcoin-circle.svg"
                 alt="User Icon"
+                width={24}
+                height={24}
               />
               <div>BTC</div>
             </div>
@@ -108,8 +118,10 @@ const Portfolio: React.FC = () => {
             <div className={styles["portfolio__chart__legend-flex"]}>
               <Image
                 className={styles["portfolio__chart__legend-icon"]}
-                src={ethereum_circle}
+                src="/icons/ethereum-circle.svg"
                 alt="User Icon"
+                width={24}
+                height={24}
               />
               <div>ETH</div>
             </div>
@@ -117,8 +129,10 @@ const Portfolio: React.FC = () => {
             <div className={styles["portfolio__chart__legend-flex"]}>
               <Image
                 className={styles["portfolio__chart__legend-icon"]}
-                src={bitcoin_circle}
+                src="/icons/bitcoin-circle.svg"
                 alt="User Icon"
+                width={24}
+                height={24}
               />
               <div>BTC</div>
             </div>

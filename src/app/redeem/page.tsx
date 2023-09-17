@@ -5,7 +5,6 @@ import CollateralForm, {
   CollateralType,
 } from "@/app/components/CollateralForm";
 import styles from "@/app/styles/modules/pages/redeem.module.scss";
-import coinSwap from "@/app/assets/icons/coins-swap.svg";
 import React, { useState } from "react";
 
 export default function Redeem() {
@@ -22,7 +21,7 @@ export default function Redeem() {
   };
 
   return (
-    <BannerCard imgSrc={coinSwap} title="Redeem Collateral">
+    <BannerCard imgSrc="/icons/Currency-bro.svg" title="Redeem Collateral">
       <CollateralForm
         formType={CollateralFormType.REDEEM}
         amount={collateralAmount}

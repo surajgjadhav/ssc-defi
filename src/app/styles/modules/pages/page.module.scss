@@ -245,13 +245,10 @@
   }
 
   &__img {
-    height: 100%;
-    width: 100%;
+    height: auto;
     order: 1;
     @include u.min-breakpint(md) {
       order: 2;
-      height: 31.25rem;
-      width: 31.25rem;
     }
     background: linear-gradient(
       to bottom,

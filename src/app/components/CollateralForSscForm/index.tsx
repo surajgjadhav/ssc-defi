@@ -6,7 +6,7 @@ import Button from "../Button";
 import InputBox from "../InputBox";
 
 export enum CollateralForSscFormType {
-  DEPOSITE_AND_MINT = "Deposite & Mint",
+  DEPOSIT_AND_MINT = "Deposit & Mint",
   REDEEM_AND_BURN = "Redeem & Burn",
 }
 

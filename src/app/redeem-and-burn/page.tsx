@@ -21,7 +21,7 @@ export default function RedeemAndBurn() {
   return (
     <BannerCard
       imgSrc="/icons/Cash Payment-bro.svg"
-      title="Redeem & Burn Collateral"
+      title="Redeem Collateral for SSC"
     >
       <CollateralForSscForm
         formType={CollateralForSscFormType.REDEEM_AND_BURN}

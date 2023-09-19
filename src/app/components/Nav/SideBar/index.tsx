@@ -3,9 +3,9 @@ import { forwardRef } from "react";
 import NavLink from "../NavLink";
 
 const SideBar = forwardRef(function SideBar(props, ref) {
-  const depositeLinks = [
-    { href: "/deposite", linkName: "Deposite Collateral" },
-    { href: "/deposite-and-mint", linkName: "Deposite Collateral & Mint" },
+  const depositLinks = [
+    { href: "/deposit", linkName: "Deposit Collateral" },
+    { href: "/deposit-and-mint", linkName: "Deposit Collateral & Mint" },
   ];
   const redeemLinks = [
     { href: "/redeem", linkName: "Redeem Collateral" },
@@ -24,8 +24,8 @@ const SideBar = forwardRef(function SideBar(props, ref) {
           logo="/icons/stats-report.svg"
         />
         <NavLink
-          title="Deposite"
-          links={depositeLinks}
+          title="Deposit"
+          links={depositLinks}
           logo="/icons/piggy-bank.svg"
         />
         <NavLink

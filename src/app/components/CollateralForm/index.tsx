@@ -4,7 +4,7 @@ import CollateralInput from "../CollateralInput";
 import Button from "../Button";
 
 export enum CollateralFormType {
-  DEPOSITE = "Deposite",
+  DEPOSIT = "Deposit",
   REDEEM = "Redeem",
 }
 

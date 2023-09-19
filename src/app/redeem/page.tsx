@@ -13,7 +13,7 @@ export default function Redeem() {
     CollateralType.ETH
   );
 
-  const handleDepositeCollateral = () => {
+  const handleRedeemCollateral = () => {
     console.log(collateralAmount);
     console.log(collateralType);
 
@@ -26,7 +26,7 @@ export default function Redeem() {
         formType={CollateralFormType.REDEEM}
         amount={collateralAmount}
         handleChangeAmount={setCollateralAmount}
-        handleSubmit={handleDepositeCollateral}
+        handleSubmit={handleRedeemCollateral}
         collateralType={collateralType}
         handleChangeCollateral={setCollateralType}
       />

@@ -16,7 +16,7 @@ export default function CalculateHealthFactor() {
   return (
     <BannerCard
       imgSrc="/icons/Temperature Measurement-bro.svg"
-      title="Calculate Health Factor"
+      title="Health Factor"
     >
       <form
         action=""
